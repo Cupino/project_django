@@ -1,0 +1,12 @@
+<h1>Tréningy</h1>
+
+<ul>
+    {% for workout in workouts %}
+        <li>
+            <b>{{ workout.title }}</b>
+            - {{ workout.category }}
+        </li>
+    {% empty %}
+        <li>Žiadne tréningy</li>
+    {% endfor %}
+</ul>

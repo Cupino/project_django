@@ -1,0 +1,9 @@
+<h1>Registrácia</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrovať sa</button>
+</form>
+
+<a href="{% url 'login' %}">Prihlásiť sa</a>
