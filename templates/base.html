@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Fitness Tracker{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+
+<header>
+    <a href ="home.html"><strong>🏋️Fitness Tracker</strong></a>
+    <nav class="nav-middle">
+      <a href="home.html"><u>Úvod</u></a>
+      <a href="workouts.hmtl">Tréningy</a>
+      <a href="cviky.html">Zásobník cvikov</a>
+      <a href="forum.html">Fórum</a>
+    </nav>
+    <hr>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+</body>
+</html>

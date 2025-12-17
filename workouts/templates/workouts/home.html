@@ -1,12 +1,29 @@
-<h1>Tréningy</h1>
+{% extends "base.html" %}
 
-<ul>
-    {% for workout in workouts %}
-        <li>
-            <b>{{ workout.title }}</b>
-            - {{ workout.category }}
-        </li>
-    {% empty %}
-        <li>Žiadne tréningy</li>
-    {% endfor %}
-</ul>
+{% block title %}
+Úvod | Fitness Tracker
+{% endblock %}
+
+{% block content %}
+<h2>Zoznam tréningov</h2>
+
+{% if workouts %}
+    <ul>
+        {% for workout in workouts %}
+            <li>
+                <b>{{ workout.title }}</b>
+                ({{ workout.category }})
+                – autor: {{ workout.created_by.username }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Zatiaľ tu nie sú žiadne tréningy.</p>
+{% endif %}
+
+{% if user.is_authenticated and user.profile.is_trainer %}
+    <p>
+        <a href="{% url 'add_workout' %}">➕ Pridať tréning</a>
+    </p>
+{% endif %}
+{% endblock %}
