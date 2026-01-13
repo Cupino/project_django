@@ -1,0 +1,19 @@
+Nahravanie projektu na github:
+1. pip freeze > requirements.txt
+2. git init
+3. git add .
+4. git commit -am "initial commit"
+5. git remote add origin https://github.com/Cupino/project_django.git
+6. git push origin master  
+
+
+Stiahnutie projektu z guthubu:
+1. po otvoreni do konzoly: py -m venv myvenv
+2. myvenv\Scripts\activate.ps1
+3. pip install -r requirements.txt
+4. py manage.py makemigrations
+5. py manage.py migrate
+6. py manage.py runserver 
+
+
+
