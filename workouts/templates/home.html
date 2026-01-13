@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Úvod | Fitness Tracker
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Trénuj systematicky. Sleduj progres. Zlepšuj sa.</h1>
+    <p>
+        Fitness Tracker ti ponúka hotové tréningové plány,
+        databázu cvikov a priestor, kde ti tréner poradí.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="{% url 'workouts' %}" class="btn primary">
+            Zobraziť tréningy
+        </a>
+    </div>
+</section>
+
+<hr>
+{% endblock %}

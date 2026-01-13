@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Fitness Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="{% url 'home' %}">
+        <strong>🏋️ Fitness Tracker</strong>
+    </a>
+
+    <nav class="menu">
+        <a href="{% url 'home' %}">Úvod</a>
+        <a href="{% url 'workouts' %}">Tréningy</a>
+        <a href="#">Zásobník cvikov</a>
+        <a href="#">Fórum</a>
+    </nav>
+
+    <nav class="auth">
+        {% if user.is_authenticated %}
+            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">Odhlásiť</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Prihlásiť sa</a>
+            <a href="{% url 'register' %}">Vytvoriť účet</a>
+        {% endif %}
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

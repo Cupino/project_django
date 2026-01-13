@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Tréningy | Fitness Tracker
+{% endblock %}
+
+{% block content %}
+<h1>Tréningy</h1>
+
+{% if workouts %}
+    <ul>
+        {% for workout in workouts %}
+            <li>
+                <strong>{{ workout.title }}</strong>
+                – {{ workout.category }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Zatiaľ tu nie sú žiadne tréningy.</p>
+{% endif %}
+{% endblock %}

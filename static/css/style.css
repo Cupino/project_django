@@ -1,0 +1,68 @@
+    .navbar {
+      background: rgb(83, 83, 83);
+      padding: 45px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 22px;
+    }
+    .logo {
+      letter-spacing: 1px;
+      color: black;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      color: grey;
+    }
+    .menu {
+      flex: 1;
+      text-align: center;
+    }
+    .menu a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: lighter;  
+    }
+    .hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn.primary {
+    background: #2ecc71;
+    color: white;
+}
+
+.btn.secondary {
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
+}
+
+    
